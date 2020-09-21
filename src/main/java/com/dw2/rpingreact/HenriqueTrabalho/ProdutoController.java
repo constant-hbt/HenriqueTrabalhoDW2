@@ -1,5 +1,6 @@
 package com.dw2.rpingreact.HenriqueTrabalho;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,8 +68,4 @@ public class ProdutoController {
 		return "Produto não encontrado!";
 	}
 	
-	@GetMapping(path = "/product/{descricao}")
-	public @ResponseBody Iterable<Produto> findProuductByDescription(@PathVariable(required = true, name = "description") String description){
-		return produtoRepo.findByDescricao(description);
-	}
 }
